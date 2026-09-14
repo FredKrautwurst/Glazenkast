@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>De Glazenkast — Verwerijstraat 28, Middelburg</title>
+<meta name="description" content="Een VOC-pakhuis uit 1651 naast de Oostkerk, verdeeld over drie woningen. Afzonderlijk te koop, of samen als één huis van 628 m².">
+<meta name="theme-color" content="#FAF7F2">
+
+<meta property="og:title" content="De Glazenkast — Verwerijstraat 28, Middelburg">
+<meta property="og:description" content="Een VOC-pakhuis uit 1651 naast de Oostkerk, verdeeld over drie woningen.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/terras-dakterras.jpg">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Geist:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<!-- Decides before first paint whether the intro curtain plays at all, so a
+     returning visitor never sees it flash. -->
+<script>
+(function () {
+  var root = document.documentElement;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var seen = false;
+  try { seen = sessionStorage.getItem("glazenkast:intro") === "done"; } catch (e) {}
+
+  if (reduced || seen) { root.className = "no-curtain"; return; }
+
+  root.className = "curtain-active";
+  setTimeout(function () {
+    root.classList.remove("curtain-active");
+    try { sessionStorage.setItem("glazenkast:intro", "done"); } catch (e) {}
+  }, 2175);
+})();
+</script>
+
+<noscript><style>
+  .curtain { display: none; }
+  .reveal, .reveal-image { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .line-mask > span { transform: none !important; }
+  .rule-draw { transform: none !important; }
+</style></noscript>
+</head>
+
+<body id="top">
+
+<!-- Intro curtain ------------------------------------------------------- -->
+<div class="curtain" aria-hidden="true">
+  <p><span style="--i:0">D</span><span style="--i:1">e</span><span style="--i:2">&nbsp;</span><span style="--i:3">G</span><span style="--i:4">l</span><span style="--i:5">a</span><span style="--i:6">z</span><span style="--i:7">e</span><span style="--i:8">n</span><span style="--i:9">k</span><span style="--i:10">a</span><span style="--i:11">s</span><span style="--i:12">t</span></p>
+</div>
+
+<!-- Navigation ---------------------------------------------------------- -->
+<header class="nav" data-settled="false">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">De Glazenkast</a>
+
+    <nav class="nav__links">
+      <a class="link-rule" href="#woningen">Woningen</a>
+      <a class="link-rule" href="#prijzen">Prijzen</a>
+      <a class="link-rule" href="#geschiedenis">Geschiedenis</a>
+      <a class="link-rule" href="#middelburg">Middelburg</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="nav__cta" href="#contact">Bezichtiging</a>
+      <button type="button" class="nav__toggle" data-menu-open aria-label="Menu openen">Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" data-open="false">
+  <div class="menu__bar">
+    <span class="menu__brand">De Glazenkast</span>
+    <button type="button" data-menu-close aria-label="Menu sluiten">Sluiten</button>
+  </div>
+  <nav class="menu__nav">
+    <a href="#woningen">Woningen</a>
+    <a href="#prijzen">Prijzen</a>
+    <a href="#geschiedenis">Geschiedenis</a>
+    <a href="#middelburg">Middelburg</a>
+    <a href="#contact">Bezichtiging</a>
+  </nav>
+</div>
+
+<!-- Hero ---------------------------------------------------------------- -->
+<section class="hero">
+  <div class="parallax hero__image" data-strength="0.12">
+    <div class="parallax__inner">
+      <img src="images/terras-dakterras.jpg" alt="Het dakterras van De Glazenkast bij zonsondergang, met uitzicht op de koepel van de Oostkerk" fetchpriority="high" decoding="sync">
+    </div>
+  </div>
+  <div class="hero__scrim"></div>
+
+  <div class="shell hero__content">
+    <p class="hero__eyebrow reveal" data-shown="false">Verwerijstraat 28 · Middelburg · Rijksmonument</p>
+
+    <h1 class="hero__title" data-shown="false">
+      <span class="line-mask"><span>Het pakhuis van</span></span>
+      <span class="line-mask"><span style="transition-delay:90ms">de Kamer Zeeland</span></span>
+    </h1>
+
+    <div class="hero__foot">
+      <p class="hero__lede reveal" data-shown="false" style="transition-delay:260ms">
+        Gebouwd in 1651, eigendom van de VOC vanaf 1720, en sinds 2012 verdeeld over drie
+        woningen. Afzonderlijk te koop, of samen als één huis van 628 vierkante meter.
+      </p>
+      <a class="hero__link link-rule reveal" data-shown="false" style="transition-delay:380ms" href="#woningen">Bekijk de woningen</a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 · Het huis -------------------------------------------------------- -->
+<section class="shell section">
+  <p class="mark reveal" data-shown="false">
+    <span class="mark__num">01</span><span class="mark__rule"></span><span>Het huis</span>
+  </p>
+
+  <div class="split split--gap-lg">
+    <h2 class="heading" data-shown="false">
+      <span class="line-mask"><span>Ouder dan de</span></span>
+      <span class="line-mask"><span style="transition-delay:90ms">Oostkerk ernaast.</span></span>
+    </h2>
+
+    <div class="prose">
+      <p class="reveal" data-shown="false">
+        De Glazenkast dateert uit 1651 en werd neergezet als opslagpand aan wat toen al een
+        straat van pakhuizen en werkplaatsen was — zestien jaar voordat de Oostkerk op de
+        achtergrond in gebruik werd genomen. Drie verdiepingen met kelder, herkenbaar aan
+        het middentopgeveltje met hijskap op geprofileerde steunen.
+      </p>
+      <p class="reveal" data-shown="false" style="transition-delay:100ms">
+        Waar de meeste Middelburgse pakhuizen smal en diep werden gebouwd, ligt dit pand
+        dwars op zijn perceel: breed aan de straat in plaats van met een smalle kop naar
+        voren. Die afwijkende opzet gaf de VOC-Kamer Zeeland in 1720 precies wat ze zocht —
+        en geeft het huis vandaag zijn ongewone, doorlopende plattegronden.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- The facade ----------------------------------------------------------- -->
+<section>
+  <div class="reveal-image" data-shown="false">
+    <div class="parallax band-tall" data-strength="0.1">
+      <div class="parallax__inner">
+        <img src="images/voorkant-glazenkast.jpg" alt="De voorgevel van De Glazenkast met rood-witte luiken, gele stippen en de oude reclameletters op het metselwerk" style="object-position:50% 38%" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+
+  <div class="shell">
+    <p class="caption reveal" data-shown="false">
+      De voorgevel aan de Verwerijstraat — met daarop nog altijd de letters van de Zeeuwsche
+      Voeder &amp; Kunstmesthandel
+    </p>
+  </div>
+
+  <div class="shell section">
+    <div class="rule-draw hairline" data-shown="false"></div>
+
+    <dl class="facts">
+      <div class="reveal" data-shown="false">
+        <dt>Hijskap en middenpoort</dt>
+        <dd>Balen, vaten en kisten gingen niet via de voordeur naar binnen: ze werden langs de gevel opgehesen en door luiken op elke verdieping naar binnen gezwaaid.</dd>
+      </div>
+      <div class="reveal" data-shown="false" style="transition-delay:110ms">
+        <dt>De kleuren van de stad</dt>
+        <dd>De luiken zijn rood-wit met een gele stip — dezelfde kleurstelling als op de Kloveniersdoelen en het stadhuis. Middelburg voerde eeuwenlang een geel-wit-rode vlag, tot 1974.</dd>
+      </div>
+      <div class="reveal" data-shown="false" style="transition-delay:220ms">
+        <dt>Een dwarse, brede opzet</dt>
+        <dd>Circa 24 meter breed aan de straat, en na de uitbreiding van 1721 zes meter dieper. Het is de reden dat de woningen binnen zo ongewoon ruim doorlopen.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- 02 · De woningen ------------------------------------------------------ -->
+<section id="woningen" class="shell anchor woningen">
+  <p class="mark reveal" data-shown="false">
+    <span class="mark__num">02</span><span class="mark__rule"></span><span>De woningen</span>
+  </p>
+
+  <div class="split woningen__intro">
+    <h2 class="heading" data-shown="false">
+      <span class="line-mask"><span>Drie woningen,</span></span>
+      <span class="line-mask"><span style="transition-delay:90ms">één constructie.</span></span>
+    </h2>
+    <p class="prose reveal" data-shown="false">
+      De beelden hieronder zijn herinterpretaties: ze laten zien wat er in deze ruimtes
+      mogelijk is, niet hoe ze er vandaag bij staan. Voor de huidige indeling en
+      plattegronden verwijzen we naar de Funda-pagina van elke woning.
+    </p>
+  </div>
+
+  <div class="apartments">
+
+    <!-- 28 — De loft -->
+    <article class="apartment">
+      <div class="apartment__grid">
+        <button type="button" class="figure reveal-image apartment__figure" data-shown="false" data-gallery="28" style="aspect-ratio:4 / 3" aria-label="Vergroot: Woonkamer met open keuken onder de oorspronkelijke dakspanten van Verwerijstraat 28">
+          <img src="images/woonkamer-keuken-28-nieuw.jpg" alt="Woonkamer met open keuken onder de oorspronkelijke dakspanten van Verwerijstraat 28" loading="lazy" decoding="async">
+        </button>
+
+        <div class="apartment__caption">
+          <h3 class="apartment__name" data-shown="false">
+            <span class="line-mask"><span>28</span></span>
+            <span class="line-mask"><span style="transition-delay:90ms">De loft</span></span>
+          </h3>
+          <p class="apartment__body reveal" data-shown="false" style="transition-delay:120ms">
+            Het bovenste deel van het pakhuis, waar de oude spantconstructie helemaal open ligt. Onder de dakkap loopt de woonkamer door tot aan de nok, met daklichten tussen de balken. Twee woonlagen, een haard, en de trap naar het dakterras met zicht op de koepel van de Oostkerk.
+          </p>
+          <p class="apartment__figures reveal" data-shown="false" style="transition-delay:200ms">
+            <span class="tnum apartment__stat">240 m²</span>
+            <span class="tnum apartment__stat">€675.000</span>
+            <span class="tnum apartment__sqm">€2.813 per m²</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="strip">
+        <div class="strip__track">
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" data-gallery="28" style="aspect-ratio:4 / 3" aria-label="Vergroot: Woonkamer met haard van Verwerijstraat 28"><img src="images/woonkamer-haard-28-nieuw.jpg" alt="Woonkamer met haard van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:70ms" data-gallery="28" aria-label="Vergroot: Woonkamer op de zolderverdieping van Verwerijstraat 28"><img src="images/zolder-woonkamer-28-nieuw.jpg" alt="Woonkamer op de zolderverdieping van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:140ms" data-gallery="28" aria-label="Vergroot: Slaapkamer van Verwerijstraat 28"><img src="images/slaapkamer-28-nieuw.jpg" alt="Slaapkamer van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:210ms" data-gallery="28" aria-label="Vergroot: Studeerkamer van Verwerijstraat 28"><img src="images/studeerkamer-28-nieuw.jpg" alt="Studeerkamer van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:280ms" data-gallery="28" aria-label="Vergroot: Badkamer van Verwerijstraat 28"><img src="images/badkamer-28-nieuw.jpg" alt="Badkamer van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:350ms" data-gallery="28" aria-label="Vergroot: Overdekte loungehoek op het dakterras van Verwerijstraat 28"><img src="images/terras-loungehoek.jpg" alt="Overdekte loungehoek op het dakterras van Verwerijstraat 28" loading="lazy" decoding="async"></button></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 28B — De verdieping -->
+    <article class="apartment apartment--reversed">
+      <div class="apartment__grid">
+        <button type="button" class="figure reveal-image apartment__figure" data-shown="false" data-gallery="28b" style="aspect-ratio:4 / 3" aria-label="Vergroot: Woonkamer met open keuken van Verwerijstraat 28B">
+          <img src="images/woonkamer-keuken-28b.jpg" alt="Woonkamer met open keuken van Verwerijstraat 28B" loading="lazy" decoding="async">
+        </button>
+
+        <div class="apartment__caption">
+          <h3 class="apartment__name" data-shown="false">
+            <span class="line-mask"><span>28B</span></span>
+            <span class="line-mask"><span style="transition-delay:90ms">De verdieping</span></span>
+          </h3>
+          <p class="apartment__body reveal" data-shown="false" style="transition-delay:120ms">
+            De middenverdieping, met de breedte van het hele pand achter één gevel. Drie slaapkamers en een studeerkamer liggen aan een ruime hal; de woonkamer kijkt via de oude luikopeningen de Verwerijstraat in. Voor dit appartement is een kamerverhuurvergunning afgegeven.
+          </p>
+          <p class="apartment__figures reveal" data-shown="false" style="transition-delay:200ms">
+            <span class="tnum apartment__stat">163 m²</span>
+            <span class="tnum apartment__stat">€475.000</span>
+            <span class="tnum apartment__sqm">€2.914 per m²</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="strip">
+        <div class="strip__track">
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3" data-gallery="28b" aria-label="Vergroot: Hal op de eerste verdieping van Verwerijstraat 28B"><img src="images/hal-1e-verdieping-28b.jpg" alt="Hal op de eerste verdieping van Verwerijstraat 28B" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:70ms" data-gallery="28b" aria-label="Vergroot: Eerste slaapkamer van Verwerijstraat 28B"><img src="images/slaapkamer-1-28b.jpg" alt="Eerste slaapkamer van Verwerijstraat 28B" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:140ms" data-gallery="28b" aria-label="Vergroot: Tweede slaapkamer van Verwerijstraat 28B"><img src="images/slaapkamer-2-28b.jpg" alt="Tweede slaapkamer van Verwerijstraat 28B" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:210ms" data-gallery="28b" aria-label="Vergroot: Derde slaapkamer van Verwerijstraat 28B"><img src="images/slaapkamer-3-28b.jpg" alt="Derde slaapkamer van Verwerijstraat 28B" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:280ms" data-gallery="28b" aria-label="Vergroot: Studeerkamer van Verwerijstraat 28B"><img src="images/studeerkamer-28b.jpg" alt="Studeerkamer van Verwerijstraat 28B" loading="lazy" decoding="async"></button></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 28C — Het souterrain -->
+    <article class="apartment">
+      <div class="apartment__grid">
+        <button type="button" class="figure reveal-image apartment__figure" data-shown="false" data-gallery="28c" style="aspect-ratio:4 / 3" aria-label="Vergroot: Atelier in het souterrain van Verwerijstraat 28C, met zware moerbalken en oud metselwerk">
+          <img src="images/atelier-souterain-28c.jpg" alt="Atelier in het souterrain van Verwerijstraat 28C, met zware moerbalken en oud metselwerk" loading="lazy" decoding="async">
+        </button>
+
+        <div class="apartment__caption">
+          <h3 class="apartment__name" data-shown="false">
+            <span class="line-mask"><span>28C</span></span>
+            <span class="line-mask"><span style="transition-delay:90ms">Het souterrain</span></span>
+          </h3>
+          <p class="apartment__body reveal" data-shown="false" style="transition-delay:120ms">
+            De onderste twee lagen, waar het pakhuis zijn gewicht draagt. In het souterrain staan de zware moerbalken en het oude metselwerk in het zicht — ruimte genoeg voor een atelier, een werkplaats of een tweede woonlaag. Daarboven liggen de slaapkamers aan de straatzijde. Met eigen berging.
+          </p>
+          <p class="apartment__figures reveal" data-shown="false" style="transition-delay:200ms">
+            <span class="tnum apartment__stat">225 m²</span>
+            <span class="tnum apartment__stat">€625.000</span>
+            <span class="tnum apartment__sqm">€2.778 per m²</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="strip">
+        <div class="strip__track">
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3" data-gallery="28c" aria-label="Vergroot: Tweede aanzicht van het atelier in het souterrain van 28C"><img src="images/atelier-souterrain-28c-2.jpg" alt="Tweede aanzicht van het atelier in het souterrain van 28C" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:70ms" data-gallery="28c" aria-label="Vergroot: Keuken in het souterrain van Verwerijstraat 28C"><img src="images/keuken-souterrain-28c.jpg" alt="Keuken in het souterrain van Verwerijstraat 28C" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:140ms" data-gallery="28c" aria-label="Vergroot: Badkamer in het souterrain van Verwerijstraat 28C"><img src="images/badkamer-souterrain-28c.jpg" alt="Badkamer in het souterrain van Verwerijstraat 28C" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:210ms" data-gallery="28c" aria-label="Vergroot: Slaapkamer op de eerste verdieping van Verwerijstraat 28C"><img src="images/slaapkamer-1-28c.jpg" alt="Slaapkamer op de eerste verdieping van Verwerijstraat 28C" loading="lazy" decoding="async"></button></div>
+          <div class="strip__item"><button type="button" class="figure reveal-image" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:280ms" data-gallery="28c" aria-label="Vergroot: Tweede slaapkamer op de eerste verdieping van Verwerijstraat 28C"><img src="images/slaapkamer-3-28c.jpg" alt="Tweede slaapkamer op de eerste verdieping van Verwerijstraat 28C" loading="lazy" decoding="async"></button></div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 03 · Het aanbod ------------------------------------------------------- -->
+<section id="prijzen" class="anchor band-dark">
+  <div class="shell section">
+    <p class="mark mark--light reveal" data-shown="false">
+      <span class="mark__num">03</span><span class="mark__rule"></span><span>Het aanbod</span>
+    </p>
+
+    <div class="split-end prices__head">
+      <div>
+        <h2 class="heading heading--lg heading--light" data-shown="false">
+          <span class="line-mask"><span>Koop één woning,</span></span>
+          <span class="line-mask"><span style="transition-delay:90ms">twee — of het hele huis.</span></span>
+        </h2>
+        <p class="prices__lede reveal" data-shown="false" style="transition-delay:140ms">
+          Wie meer dan één woning koopt, koopt goedkoper. Wie het hele pakhuis onder één
+          akte neemt, bespaart €200.000 op de som van de drie.
+        </p>
+      </div>
+
+      <div class="price-card reveal" data-shown="false" style="transition-delay:220ms">
+        <p class="price-card__meta">28 + 28B + 28C · 628 m²</p>
+        <p class="tnum price-card__amount">€1.575.000</p>
+        <p class="tnum price-card__note">€200.000 voordeel · €2.508 per m²</p>
+      </div>
+    </div>
+
+    <div class="offers">
+      <table class="offer">
+        <caption class="sr-only">Vraagprijzen van de afzonderlijke woningen</caption>
+        <colgroup>
+          <col class="offer__c1"><col class="offer__c2"><col class="offer__c3"><col class="offer__c4">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Afzonderlijk</th>
+            <th scope="col">Oppervlak</th>
+            <th scope="col">Vraagprijs</th>
+            <th scope="col">Per m²</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28 — De loft</td>
+            <td class="tnum offer__area">240 m²</td>
+            <td class="tnum offer__price">€675.000</td>
+            <td class="tnum offer__note">€2.813</td>
+          </tr>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28B — De verdieping</td>
+            <td class="tnum offer__area">163 m²</td>
+            <td class="tnum offer__price">€475.000</td>
+            <td class="tnum offer__note">€2.914</td>
+          </tr>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28C — Het souterrain</td>
+            <td class="tnum offer__area">225 m²</td>
+            <td class="tnum offer__price">€625.000</td>
+            <td class="tnum offer__note">€2.778</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="offer">
+        <caption class="sr-only">Vraagprijzen bij aankoop van meerdere woningen</caption>
+        <colgroup>
+          <col class="offer__c1"><col class="offer__c2"><col class="offer__c3"><col class="offer__c4">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">In combinatie</th>
+            <th scope="col">Oppervlak</th>
+            <th scope="col">Vraagprijs</th>
+            <th scope="col">Voordeel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28 + 28B</td>
+            <td class="tnum offer__area">403 m²</td>
+            <td class="tnum offer__price">€1.050.000</td>
+            <td class="tnum offer__note">€100.000 voordeel</td>
+          </tr>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28 + 28C</td>
+            <td class="tnum offer__area">465 m²</td>
+            <td class="tnum offer__price">€1.200.000</td>
+            <td class="tnum offer__note">€100.000 voordeel</td>
+          </tr>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28B + 28C</td>
+            <td class="tnum offer__area">388 m²</td>
+            <td class="tnum offer__price">€1.000.000</td>
+            <td class="tnum offer__note">€100.000 voordeel</td>
+          </tr>
+          <tr class="reveal" data-shown="false">
+            <td class="offer__units">28 + 28B + 28C</td>
+            <td class="tnum offer__area">628 m²</td>
+            <td class="tnum offer__price">€1.575.000</td>
+            <td class="tnum offer__note">€200.000 voordeel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="prices__note reveal" data-shown="false" style="transition-delay:120ms">
+      De woningen 28 en 28B hebben elk een eigen gedeelte in de gemeenschappelijke kelder
+      onder het pakhuis. 28C beschikt over een eigen berging. Voor 28B is een
+      kamerverhuurvergunning afgegeven.
+    </p>
+  </div>
+</section>
+
+<!-- 04 · Wonen en werken -------------------------------------------------- -->
+<section class="shell section">
+  <p class="mark reveal" data-shown="false">
+    <span class="mark__num">04</span><span class="mark__rule"></span><span>Wonen en werken</span>
+  </p>
+
+  <div class="split split--gap-lg">
+    <h2 class="heading" data-shown="false">
+      <span class="line-mask"><span>Wat wordt het</span></span>
+      <span class="line-mask"><span style="transition-delay:90ms">volgende hoofdstuk?</span></span>
+    </h2>
+
+    <div class="uses-wrap">
+      <p class="prose reveal" data-shown="false">
+        628 vierkante meter, hoge plafonds, elf mogelijke slaapkamers en een brede, dwarse
+        plattegrond. Wat hier al eerder werkte — opslag, atelier, museum, galerie, woonhuis
+        — zegt genoeg over hoe veel het pand aankan.
+      </p>
+
+      <ul class="uses">
+        <li class="reveal" data-shown="false">
+          <span class="uses__title">Kleinschalige verhuur</span>
+          <span class="uses__text">28B heeft al een kamerverhuurvergunning — studio’s voor langer verblijf zijn direct mogelijk.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:80ms">
+          <span class="uses__title">Retreat of bewustzijnscentrum</span>
+          <span class="uses__text">Elf slaapkamers en een yogastudio onder de spanten, met zicht op de koepel van de Oostkerk.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:160ms">
+          <span class="uses__title">Atelier en galerie</span>
+          <span class="uses__text">Midden in de Kunst- en Cultuurroute, precies waar het pand eerder als museum en kunstenaarswoning functioneerde.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:240ms">
+          <span class="uses__title">Proeflokaal of kookstudio</span>
+          <span class="uses__text">Een verwijzing naar het koopmansverleden in specerijen en handelswaar, in het souterrain onder de moerbalken.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:320ms">
+          <span class="uses__title">Trouw- en eventlocatie</span>
+          <span class="uses__text">Een intieme plek om te vieren, een paar huizen van de Oostkerk.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · Vier eeuwen ------------------------------------------------------ -->
+<section id="geschiedenis" class="anchor band-shell">
+  <div class="shell section">
+    <p class="mark reveal" data-shown="false">
+      <span class="mark__num">05</span><span class="mark__rule"></span><span>Vier eeuwen</span>
+    </p>
+
+    <div class="split split--gap-xl">
+      <div>
+        <h2 class="heading" data-shown="false">
+          <span class="line-mask"><span>Van pakhuis</span></span>
+          <span class="line-mask"><span style="transition-delay:90ms">tot woonhuis.</span></span>
+        </h2>
+        <p class="history__lede reveal" data-shown="false" style="transition-delay:120ms">
+          De uitbreiding van 1721 laat zien hoe serieus de Kamer Zeeland haar aanwinst nam:
+          binnen een jaar na de aankoop verrees een achterhuis van dezelfde breedte. Een
+          pakhuis dat volstond voor één koopman werd opslagruimte voor een compagnie die
+          jaarlijks tientallen schepen naar Azië liet varen — en eens in de acht jaar
+          vergaderden de Heren XVII in Middelburg.
+        </p>
+
+        <div class="figure reveal-image history__map" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:200ms">
+          <img src="images/kaart-middelburg.jpg" alt="Historische plattegrond van Middelburg met de vestingwerken en de binnenstad" loading="lazy" decoding="async">
+        </div>
+        <p class="caption reveal" data-shown="false" style="transition-delay:240ms">
+          Middelburg in de 18de eeuw — de stad waar de Kamer Zeeland ongeveer een kwart van
+          de VOC vertegenwoordigde
+        </p>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal" data-shown="false">
+          <span class="tnum timeline__year">1651</span>
+          <span class="timeline__text">Gebouwd als particulier pakhuis, vlak bij de kades en de scheepstimmerwerf — zestien jaar voordat de Oostkerk ernaast in gebruik werd genomen.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:70ms">
+          <span class="tnum timeline__year">1720</span>
+          <span class="timeline__text">Aangekocht door de VOC-Kamer Zeeland, die ongeveer een kwart van de hele Compagnie vertegenwoordigde.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:140ms">
+          <span class="tnum timeline__year">1721</span>
+          <span class="timeline__text">Binnen een jaar uitgebreid met een achterhuis van dezelfde breedte — circa 24 meter — en zes meter extra diepte.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:210ms">
+          <span class="tnum timeline__year">19de eeuw</span>
+          <span class="timeline__text">Een tweede handelsleven als opslagplaats van de Zeeuwsche Voeder &amp; Kunstmesthandel, wiens naam nog op de gevel staat.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:280ms">
+          <span class="tnum timeline__year">Jaren ’70</span>
+          <span class="timeline__text">Na eeuwen van opslag gerestaureerd en voor het eerst bewoond, als woonhuis en atelier.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:350ms">
+          <span class="tnum timeline__year">2007</span>
+          <span class="timeline__text">Volledig gerenoveerd en daarna in gebruik als museum en galerie voor Zeeuwse kunstenaars.</span>
+        </li>
+        <li class="reveal" data-shown="false" style="transition-delay:420ms">
+          <span class="tnum timeline__year">2012</span>
+          <span class="timeline__text">Gesplitst in drie appartementen, met behoud van de historische balken en spantconstructies.</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Interlude ------------------------------------------------------------- -->
+<div class="reveal-image" data-shown="false">
+  <div class="parallax band-mid" data-strength="0.1">
+    <div class="parallax__inner">
+      <img src="images/de-glazenkast-pand.jpg" alt="De Glazenkast aan de Verwerijstraat, met de koepel van de Oostkerk erachter" style="object-position:38% 42%" loading="lazy" decoding="async">
+    </div>
+  </div>
+</div>
+
+<!-- 06 · De stad ---------------------------------------------------------- -->
+<section id="middelburg" class="shell section anchor">
+  <p class="mark reveal" data-shown="false">
+    <span class="mark__num">06</span><span class="mark__rule"></span><span>De stad</span>
+  </p>
+
+  <div class="split split--gap-lg">
+    <div>
+      <h2 class="heading" data-shown="false">
+        <span class="line-mask"><span>Klein genoeg om</span></span>
+        <span class="line-mask"><span style="transition-delay:90ms">te kennen.</span></span>
+      </h2>
+      <div class="figure reveal-image city__photo" data-shown="false" style="aspect-ratio:4 / 3;transition-delay:180ms">
+        <img src="images/oostkerk-dak.jpg" alt="Zicht op de koepel van de Oostkerk vanaf de daken rond De Glazenkast" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="prose">
+      <p class="reveal" data-shown="false">
+        Middelburg heeft zijn geschiedenis niet in een museum opgeborgen. Je fietst er
+        middendoor: langs de grachten, langs pakhuizen als dit, langs het laatgotische
+        stadhuis en de abdij waar de Heren XVII vergaderden. Als hoofdstad van Zeeland heeft
+        de stad wat je in een grote stad zoekt — horeca en cultuur rond de Markt en de Lange
+        Delft, het Zeeuws Museum, theater en muziek — zonder de drukte.
+      </p>
+      <p class="reveal" data-shown="false" style="transition-delay:100ms">
+        University College Roosevelt brengt een internationale, jonge energie midden in de
+        binnenstad. Ondernemers en zzp’ers werken er in monumentale panden. De
+        treinverbinding met Noord-Brabant en Zuid-Holland is goed, en wie de auto pakt merkt
+        al snel dat Zeeland een van de weinige provincies is waar je vrijwel nooit
+        stilstaat. Als de werkdag erop zit ben je binnen tien minuten fietsen bij het Veerse
+        Meer of de duinen van Walcheren.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="reveal-image" data-shown="false">
+  <div class="parallax band-mid band-mid--tall" data-strength="0.1">
+    <div class="parallax__inner">
+      <img src="images/stad-middelburg.jpg" alt="De historische binnenstad van Middelburg vanuit de lucht, met het stadhuis en de Oostkerk" loading="lazy" decoding="async">
+    </div>
+  </div>
+</div>
+
+<!-- Contact --------------------------------------------------------------- -->
+<footer id="contact" class="anchor band-dark">
+  <div class="shell section">
+    <div class="split-end contact">
+      <div>
+        <h2 class="heading heading--lg heading--light" data-shown="false">
+          <span class="line-mask"><span>Kom het zien.</span></span>
+          <span class="line-mask"><span style="transition-delay:90ms">Liefst bij avondlicht.</span></span>
+        </h2>
+        <p class="contact__lede reveal" data-shown="false" style="transition-delay:140ms">
+          Bezichtigingen gaan op afspraak, per woning of voor het hele pakhuis. Laat weten
+          waar je belangstelling naar uitgaat, dan plannen we een moment.
+        </p>
+        <p class="reveal" data-shown="false" style="transition-delay:200ms">
+          <a class="btn-outline" href="mailto:info@nhvp.nl?subject=Bezichtiging%20De%20Glazenkast">Vraag een bezichtiging aan</a>
+        </p>
+      </div>
+
+      <div class="contact__details reveal" data-shown="false" style="transition-delay:220ms">
+        <div>
+          <p class="contact__label">E-mail</p>
+          <a class="contact__value link-rule" href="mailto:info@nhvp.nl">info@nhvp.nl</a>
+        </div>
+        <div>
+          <p class="contact__label">Telefoon en WhatsApp</p>
+          <a class="tnum contact__value link-rule" href="https://wa.me/31652600471" target="_blank" rel="noopener noreferrer">06 52 60 04 71</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-draw hairline hairline--light colophon__rule" data-shown="false"></div>
+
+    <div class="colophon">
+      <p class="reveal" data-shown="false">Verwerijstraat 28, 28B en 28C · 4331 TC Middelburg</p>
+      <p class="tnum reveal" data-shown="false" style="transition-delay:80ms">Rijksmonument 29616 · Gebouwd 1651 · VOC-eigendom vanaf 1720</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -------------------------------------------------------------- -->
+<div class="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Vergrote foto">
+  <div class="lightbox__bar">
+    <span class="tnum" data-lightbox-count>01 / 01</span>
+    <button type="button" data-lightbox-close>Sluiten</button>
+  </div>
+  <div class="lightbox__stage">
+    <img data-lightbox-image src="" alt="">
+  </div>
+  <div class="lightbox__foot">
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <div class="lightbox__nav">
+      <button type="button" data-lightbox-prev>Vorige</button>
+      <button type="button" data-lightbox-next>Volgende</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
